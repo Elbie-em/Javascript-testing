@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Elbie-em/Javascript-testing/issues"
   },
-  "homepage": "https://github.com/Elbie-em/Javascript-testing#readme"
+  "homepage": "https://github.com/Elbie-em/Javascript-testing#readme",
+  "devDependencies": {
+    "jest": "^26.4.0"
+  }
 }
