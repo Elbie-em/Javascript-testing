@@ -55,7 +55,7 @@ test('addition of floating point numbers', () => {
 
 // Strings
 // You can check strings against regular expressions with toMatch method:
-test('there is no U in college',() => {
+test('there is no U in college', () => {
     expect('College').not.toMatch(/U/);
 });
 
@@ -79,4 +79,20 @@ const shoppingCart = [
 test('the shopping list has cereal or sugar in it', () => {
     expect(shoppingCart).toContain('cereal');
     expect(new Set(shoppingCart)).toContain('sugar');
+});
+
+function compileAndroidCode() {
+    throw new Error('you are using the wrong JDK');
+}
+
+// Exceptions
+// If you want to test whether a particular function throws an error when it's called, use toThrow
+
+test('compiling android goes as expected', () => {
+    expect(compileAndroidCode).toThrow();
+    expect(compileAndroidCode).toThrow(Error);
+
+    // You can also use the exact error message or a regexp
+    expect(compileAndroidCode).toThrow('you are using the wrong JDK');
+    expect(compileAndroidCode).toThrow(/JDK/);
 });
